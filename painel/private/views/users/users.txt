@@ -1,0 +1,34 @@
+<table class="dev-table-all">
+				<tr>
+				  <th>Nome</th>
+				  <th>Nivel</th>
+				  <th>Status</th>
+				  <th>&nbsp;</th>
+				</tr>
+				<?php 
+					$uteis = new Uteis;
+					foreach($viewmodel as $usuario):
+				?>
+				<tr>
+				  <td><?php echo $usuario["nome"]?></td>
+				  <td><?php if( $usuario["nivel"] == 1 ) {echo "Administrador";}else{echo "Editor";}?></td>
+				  <td><?php
+						if($usuario["status"] == 1)
+						{
+							echo '<span class="dev-button small dev-flat-belize-hole">Activo</span>';
+						}else{
+							echo '<span class="dev-button small dev-flat-alizarin">Inactivo</span>';
+						} 
+
+					?></td>
+				  <td>
+					<a class="dev-button small dev-flat-belize-hole " href="<?php echo ROOT_URL?>users/salvar/<?php echo $usuario["id"]?>">
+						<i class="fa fa-edit"></i> Editar
+					</a>
+					<a class="dev-button small dev-flat-alizarin" href="<?php echo ROOT_URL?>users/remover/<?php echo $usuario["id"]?>">
+						<i class="fa fa-trash"></i> Remover
+					</a>
+				  </td>
+				</tr>
+				<?php endforeach;?>
+			</table>

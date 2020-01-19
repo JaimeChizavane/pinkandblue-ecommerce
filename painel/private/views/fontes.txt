@@ -1,0 +1,8 @@
+  <style type="text/css" media="screen, print">
+    @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+    }
+    
+    body { font-family: "Bitstream Vera Serif Bold", serif }
+  </style>

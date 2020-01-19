@@ -1,0 +1,23 @@
+
+.remove_icon_foto,.remove_icon_foto_galeria,.remove_icon_imagem{
+	position:absolute;
+	top:.4em;
+	right:.4em;
+	z-index:1;
+	background-color:#fff;
+	padding:.5em;
+	border:1px solid #ddd;
+	cursor:pointer;
+}
+.login{
+	width: 390px;
+	max-width:100%;
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+}

@@ -1,0 +1,29 @@
+| New Account Info                  |
++===================================+
+| Domain: casacoimbramaputo.com
+| Ip: 68.65.120.211 (n)
+| HasCgi: y
+| UserName: casacoimbramaput
+| PassWord: Inacio_05011991
+| CpanelMod: paper_lantern
+| HomeRoot: /home
+| Quota: unlimited
+| NameServer1: ns5.awardspace.com
+| NameServer2: ns6.awardspace.com
+| NameServer3: 
+| NameServer4: 
+| Contact Email: inaciowassir@gmail.com
+| Package: default
+| Feature List: default
+| Language: en
++===================================+
+User: casacoimbramaput_main
+pass: {!UJoNS6Bi^H
+Database: casacoimbramaput_database
+
+
+######################################FTP#####################
+FTP Password:uaq]YQ+A]K(;
+FTP Username: Inacio_wassir@casacoimbramaputo.com
+FTP server: ftp.casacoimbramaputo.com
+FTP & explicit FTPS port:  21

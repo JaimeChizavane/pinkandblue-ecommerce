@@ -1,0 +1,33 @@
+<table class="w3-table-all">
+				<tr>
+				  <th>Bairro</th>
+				  <th>Total de Imoveis no Bairro</th>
+				  <th>Status</th>
+				  <th>Data do Registo</th>
+				  <th>&nbsp;</th>
+				</tr>
+				<?php 
+					$uteis = new Uteis;
+					foreach($viewmodel as $bairro):
+				?>
+				<tr>
+				  <td><i class="fa fa-map-marker"></i> <?php echo $bairro["nome"]?></td>
+				  <td><span class="w3-badge w3-flat-belize-hole"><?php echo $uteis->recuperaTotal('imoveis','WHERE bairro_id ='.$bairro["id"].'');?></span></td>
+				  <td><?php 
+					if($bairro["status"] == 1)
+						echo '<span class="w3-button small w3-flat-belize-hole">Activo</span>';
+					if($bairro["status"] == 2)
+						echo '<span class="w3-button small w3-flat-alizarin">Nao Activo</span>';
+				  ?></td>
+				  <td><?php echo date("d/m/Y",strtotime($bairro["data_registo"]));?></td>
+				  <td>
+					<a class="w3-button small w3-flat-belize-hole " href="<?php echo ROOT_URL?>bairros/salvar/<?php echo $bairro["id"]?>">
+						<i class="fa fa-edit"></i> Editar
+					</a>
+					<a class="w3-button small w3-flat-alizarin" href="<?php echo ROOT_URL?>bairros/remover/<?php echo $bairro["id"]?>">
+						<i class="fa fa-trash"></i> Remover
+					</a>
+				  </td>
+				</tr>
+				<?php endforeach;?>
+			</table>

@@ -1,0 +1,27 @@
+<table class="dev-table-all">
+				<tr>
+				  <th width="30%">Mensagem</th>
+				  <th width="30%">email</th>
+				  <th width="20%">Data de Registo</th>
+				  <th width="20%">&nbsp;</th>
+				</tr>
+				<?php 
+					$uteis = new Uteis;
+					foreach($viewmodel as $mensagem):
+				?>
+				<tr>
+				  <td width="30%"><?php echo $mensagem["mensagem"]?></td>
+				  <td width="30%"><?php echo $mensagem["email"]?></td>
+				  <td width="20%"><?php echo date("d/m/Y",strtotime($mensagem["data_registo"]));?></td>
+				  <td width="20%">
+					<a class="dev-button dev-flat-belize-hole small" href="<?php echo ROOT_URL?>mensagens/ver/<?php echo $mensagem["id"]?>">
+						<i class="fa fa-search"></i> Ver
+					</a>
+
+					<a class="dev-button dev-flat-alizarin small" href="<?php echo ROOT_URL?>mensagens/remover/<?php echo $mensagem["id"]?>">
+						<i class="fa fa-trash"></i> Remover
+					</a>
+				  </td>
+				</tr>
+				<?php endforeach;?>
+			</table>
